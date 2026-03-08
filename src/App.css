@@ -1,0 +1,399 @@
+.page {
+  @apply min-h-screen text-neutral-100 transition-colors duration-200 ease-in-out text-center;
+}
+
+.body--dark {
+  @apply bg-gradient-to-br from-neutral-900 via-neutral-950 to-black text-neutral-100;
+}
+
+.body--light {
+  @apply bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 text-neutral-900;
+}
+
+#root {
+  @apply max-w-5xl mx-auto px-4 pt-10 pb-12 sm:px-6 lg:px-0;
+}
+
+a {
+  @apply no-underline text-inherit;
+}
+
+a:hover {
+  @apply underline;
+}
+
+.navbar {
+  @apply flex items-center justify-between gap-6 mb-10;
+}
+
+.navbar__brand {
+  @apply font-semibold tracking-[0.18em] uppercase text-xs sm:text-sm text-neutral-300;
+}
+
+.navbar__links {
+  @apply flex flex-wrap items-center gap-3 text-xs sm:text-sm text-neutral-400 list-none m-0 p-0;
+}
+
+.navbar__links a {
+  @apply opacity-80;
+}
+
+.navbar__links a:hover {
+  @apply opacity-100;
+}
+
+.hero {
+  @apply flex flex-col gap-8;
+}
+
+.hero__content {
+  @apply grid gap-8 items-center md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)];
+}
+
+.hero__tag {
+  @apply text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-neutral-400 mb-2;
+}
+
+.hero h1 {
+  @apply text-3xl sm:text-[2.1rem] md:text-[2.4rem] leading-tight font-semibold mb-2;
+}
+
+.hero__subtitle {
+  @apply text-sm sm:text-[0.95rem] leading-relaxed text-neutral-300 max-w-xl;
+}
+
+.hero__actions {
+  @apply flex flex-wrap gap-3 mt-6 mb-3;
+}
+
+.hero__contact {
+  @apply flex flex-wrap gap-2 text-xs sm:text-[0.8rem] text-neutral-400;
+}
+
+.hero__contact-item {
+  @apply inline-flex items-center gap-1.5;
+}
+
+.hero__contact-item svg {
+  @apply text-neutral-500;
+}
+
+.hero__photo-card {
+  @apply relative rounded-3xl bg-gradient-to-b from-neutral-800 to-black p-4 shadow-2xl border border-neutral-700/70;
+}
+
+.hero__photo-wrapper {
+  @apply rounded-2xl overflow-hidden border border-neutral-900 bg-black;
+}
+
+.hero__photo-wrapper img {
+  @apply block w-full h-auto;
+}
+
+.hero__badge {
+  @apply mt-4 inline-flex flex-col gap-0.5 rounded-full border border-neutral-700 bg-neutral-950/90 px-4 py-2;
+}
+
+.hero__name {
+  @apply text-[0.68rem] sm:text-[0.72rem] uppercase tracking-[0.32em] text-neutral-300;
+}
+
+.hero__role {
+  @apply text-[0.7rem] text-neutral-400;
+}
+
+.section {
+  @apply mt-12;
+}
+
+.section--alt {
+  @apply mt-10 rounded-3xl border border-neutral-800 bg-neutral-900/50 px-5 py-8;
+}
+
+.section--accent {
+  @apply rounded-3xl border border-neutral-700 bg-neutral-900/80 px-5 py-9;
+}
+
+.section--personal {
+  @apply mt-10 rounded-3xl border border-neutral-800 bg-neutral-900/70 px-5 py-8;
+}
+
+.section__header {
+  @apply flex flex-col gap-1.5 mb-6 items-center text-center;
+}
+
+.section__header h2 {
+  @apply text-lg sm:text-xl font-semibold text-neutral-50;
+}
+
+.section__header p {
+  @apply text-sm text-neutral-300 max-w-xl;
+}
+
+.section__header--center {
+  @apply items-center text-center;
+}
+
+.section__subheader {
+  @apply mt-7 mb-3;
+}
+
+.section__note {
+  @apply mt-5 text-xs sm:text-[0.8rem] text-neutral-400;
+}
+
+.card {
+  @apply rounded-2xl border border-neutral-800 bg-neutral-900/70 px-5 py-5;
+}
+
+.timeline {
+  @apply list-none p-0 m-0 mb-4 border-l border-neutral-700 pl-4 text-sm;
+}
+
+.timeline li {
+  @apply mb-3;
+}
+
+.timeline h4 {
+  @apply text-sm font-medium mb-0.5 text-neutral-100;
+}
+
+.timeline p {
+  @apply text-xs text-neutral-400;
+}
+
+.list {
+  @apply list-disc p-0 m-0 flex flex-col gap-1.5 text-[0.86rem] text-neutral-300 text-left pl-6;
+}
+
+.list--inline {
+  @apply flex-row flex-wrap gap-2;
+}
+
+.list--compact {
+  @apply gap-1 text-xs;
+}
+
+.chips {
+  @apply flex flex-wrap gap-2 mt-2;
+}
+
+.chip {
+  @apply inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900/80 px-3 py-1 text-[0.7rem] text-neutral-300;
+}
+
+.project-card {
+  @apply rounded-2xl border border-neutral-700 bg-neutral-900/80 px-5 py-5;
+}
+
+.project-card--secondary {
+  @apply border-neutral-600;
+}
+
+.project-card--personal {
+  @apply md:col-span-2 flex flex-col gap-4 md:flex-row items-stretch;
+}
+
+.section--personal .project-card__image {
+  @apply overflow-hidden rounded-2xl border border-neutral-800 bg-black max-h-64 md:max-h-none md:min-w-[280px] md:w-[42%] flex-shrink-0;
+}
+
+.section--personal .project-card__content {
+  @apply flex flex-col text-left min-w-0 md:flex-1;
+}
+
+.project-card__image {
+  @apply overflow-hidden rounded-2xl border border-neutral-800 bg-black max-h-64 md:max-h-none md:w-1/2;
+}
+
+.project-card__image img {
+  @apply w-full h-full object-cover;
+}
+
+.project-card__meta {
+  @apply text-[0.68rem] tracking-[0.24em] uppercase text-neutral-400 mb-2;
+}
+
+.project-card p {
+  @apply text-[0.86rem] text-neutral-200;
+}
+
+.project-card__links {
+  @apply mt-3 flex flex-wrap gap-2;
+}
+
+.section--personal .project-card__links {
+  @apply justify-start;
+}
+
+.contact-info {
+  @apply rounded-2xl border border-neutral-700 bg-neutral-900/90 px-5 py-5 text-sm;
+}
+
+.contact-form {
+  @apply rounded-2xl border border-neutral-700 bg-neutral-900/80 px-5 py-5 flex flex-col gap-4;
+}
+
+.form-group {
+  @apply flex flex-col gap-1;
+}
+
+label {
+  @apply text-xs font-medium text-neutral-300;
+}
+
+input,
+textarea {
+  @apply rounded-xl border border-neutral-700 bg-neutral-950/80 px-3 py-2 text-sm text-neutral-50 outline-none;
+}
+
+input:focus,
+textarea:focus {
+  @apply border-neutral-400 ring-1 ring-neutral-500;
+}
+
+textarea {
+  @apply resize-y;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full border-none bg-neutral-100 px-5 py-2 text-xs sm:text-[0.8rem] font-medium text-neutral-900 shadow-md transition-transform duration-100 ease-in-out;
+}
+
+.btn:hover {
+  @apply -translate-y-[1px] shadow-lg no-underline;
+}
+
+.btn--ghost {
+  @apply bg-transparent text-neutral-200 border border-neutral-600 shadow-none;
+}
+
+.btn--ghost:hover {
+  @apply bg-neutral-900;
+}
+
+.btn--small {
+  @apply px-4 py-1.5 text-[0.7rem];
+}
+
+.btn--full {
+  @apply w-full;
+}
+
+.footer {
+  @apply mt-10 pt-5 border-t border-neutral-800 text-center text-[0.7rem] text-neutral-500;
+}
+
+.navbar__toggle span {
+  @apply ml-1;
+}
+
+.navbar__toggle svg {
+  @apply mr-0.5;
+}
+
+.body--light .navbar__brand {
+  @apply text-neutral-700;
+}
+
+.body--light .navbar__links {
+  @apply text-neutral-600;
+}
+
+.body--light .hero__subtitle {
+  @apply text-neutral-700;
+}
+
+.body--light .hero__tag {
+  @apply text-neutral-500;
+}
+
+.body--light .hero h1 {
+  @apply text-neutral-950;
+}
+
+.body--light .hero__contact {
+  @apply text-neutral-700;
+}
+
+.body--light .hero__contact-item svg {
+  @apply text-neutral-500;
+}
+
+.body--light .section--alt,
+.body--light .section--accent,
+.body--light .card,
+.body--light .project-card,
+.body--light .contact-info,
+.body--light .contact-form,
+.body--light .hero__photo-card {
+  @apply bg-white/90 border-neutral-200;
+}
+
+.body--light .list {
+  @apply text-neutral-800;
+}
+
+.body--light .timeline p {
+  @apply text-neutral-600;
+}
+
+.body--light .project-card p {
+  @apply text-neutral-800;
+}
+
+.body--light .section__note {
+  @apply text-neutral-600;
+}
+
+.body--light .section__header h2 {
+  @apply text-neutral-900;
+}
+
+.body--light .section__header p {
+  @apply text-neutral-700;
+}
+
+.body--light .card,
+.body--light .project-card {
+  @apply text-neutral-900;
+}
+
+.body--light .section--personal {
+  @apply bg-white border-neutral-200;
+}
+
+.body--light .timeline h4 {
+  @apply text-neutral-900;
+}
+
+.body--light .project-card__meta {
+  @apply text-neutral-600;
+}
+
+.body--light .chip {
+  @apply bg-white border-neutral-200 text-neutral-700;
+}
+
+.body--light .btn {
+  @apply bg-neutral-900 text-neutral-50;
+}
+
+.body--light .btn--ghost {
+  @apply bg-transparent text-neutral-800 border-neutral-400;
+}
+
+.body--light .footer {
+  @apply border-neutral-300 text-neutral-500;
+}
+
+@media (max-width: 900px) {
+  #root {
+    @apply px-4 pt-8 pb-10;
+  }
+
+  .navbar {
+    @apply flex-col items-start gap-2.5;
+  }
+}
+
