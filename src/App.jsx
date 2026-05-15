@@ -206,7 +206,7 @@ function App() {
                 </p>
                 <ul className="list list--compact">
                   <li>
-                    Desarrollo de una aplicación web con Flask y PostgreSQL para
+                    Desarrollo de una aplicación web con Django y PostgreSQL para
                     automatizar la generación de descripciones académicas.
                   </li>
                   <li>
@@ -463,6 +463,9 @@ function App() {
               <li>AMENAZAS DEL PHISHING.</li>
               <li>Universidad Desarrollo Web - FrontEnd Web Developer!</li>
               <li>Auditor ISO 27001 Fundamentals.</li>
+              <li>Odoo para Programadores (v17, v18) – Nivel Básico</li>
+              <li>.NET Backend: .NET Core, SQL Server y Seguridad JWT</li>
+
             </ul>
           </div>
         </section>
