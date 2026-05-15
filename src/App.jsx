@@ -439,6 +439,31 @@ function App() {
               </div>
             </div>
           </article>
+
+          <article className="project-card project-card--personal">
+            <div className="project-card__image">
+              <img src="/img/net.png" alt="Vista del proyecto Sistema de Inventario .NET" />
+            </div>
+            <div className="project-card__content">
+              <h3>Sistema de Inventario · .NET</h3>
+              <p className="project-card__meta">.NET 9 · C# · Clean Architecture · API REST</p>
+              <p>
+                API de inventario empresarial con arquitectura en 3 capas: productos, usuarios,
+                clientes, facturas y almacenes. Entity Framework Core y MySQL.
+              </p>
+              <div className="project-card__links">
+                <a
+                  href="https://github.com/jhonziz2/ejemplo-net"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn--small"
+                >
+                  <FiGithub size={14} />
+                  <span>Código en GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
           </div>
         </section>
 
