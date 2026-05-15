@@ -405,6 +405,40 @@ function App() {
               </div>
             </div>
           </article>
+
+          <article className="project-card project-card--personal">
+            <div className="project-card__image">
+              <img src="/img/django.png" alt="Vista del proyecto TechNova" />
+            </div>
+            <div className="project-card__content">
+              <h3>TechNova · Inventario</h3>
+              <p className="project-card__meta">React · Vite · Django API · Vercel</p>
+              <p>
+                Frontend de inventario TechNova con React y Vite. Consume la API REST de
+                Django desplegada en Render y está publicado en Vercel.
+              </p>
+              <div className="project-card__links">
+                <a
+                  href="https://github.com/jhonziz2/djangovercel"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn--small"
+                >
+                  <FiGithub size={14} />
+                  <span>Código en GitHub</span>
+                </a>
+                <a
+                  href="https://djangovercel-nine.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn--ghost btn--small"
+                >
+                  <FiExternalLink size={14} />
+                  <span>Ver demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
           </div>
         </section>
 
