@@ -210,6 +210,18 @@ a:hover {
   @apply w-full h-full object-cover;
 }
 
+.project-card__image .project-card__slideshow {
+  @apply relative w-full h-full min-h-[220px] md:min-h-[280px] bg-neutral-950;
+}
+
+.project-card__image .project-card__slideshow img {
+  @apply absolute inset-0 m-auto max-w-[calc(100%-1rem)] max-h-[calc(100%-1rem)] w-auto h-auto object-contain object-center opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none;
+}
+
+.project-card__image .project-card__slideshow img.is-active {
+  @apply opacity-100;
+}
+
 .project-card__meta {
   @apply text-[0.68rem] tracking-[0.24em] uppercase text-neutral-400 mb-2;
 }

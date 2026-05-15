@@ -11,6 +11,41 @@ import {
   FiSun,
 } from 'react-icons/fi'
 
+const INTRANET_SLIDES = [
+  '/img/intranet/1.png',
+  '/img/intranet/2.png',
+  '/img/intranet/3.png',
+  '/img/intranet/4.png',
+  '/img/intranet/5.png',
+]
+
+function ProjectImageSlideshow({ images, altPrefix, intervalMs = 4000 }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    if (images.length <= 1) return undefined
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % images.length)
+    }, intervalMs)
+
+    return () => window.clearInterval(timer)
+  }, [images.length, intervalMs])
+
+  return (
+    <div className="project-card__slideshow" aria-label={`Capturas de ${altPrefix}`}>
+      {images.map((src, index) => (
+        <img
+          key={src}
+          src={src}
+          alt={`${altPrefix} · vista ${index + 1}`}
+          className={index === activeIndex ? 'is-active' : undefined}
+        />
+      ))}
+    </div>
+  )
+}
+
 function App() {
   const [theme, setTheme] = useState(() => {
     if (typeof window === 'undefined') return 'dark'
@@ -454,6 +489,34 @@ function App() {
               <div className="project-card__links">
                 <a
                   href="https://github.com/jhonziz2/ejemplo-net"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn--small"
+                >
+                  <FiGithub size={14} />
+                  <span>Código en GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article className="project-card project-card--personal">
+            <div className="project-card__image">
+              <ProjectImageSlideshow
+                images={INTRANET_SLIDES}
+                altPrefix="Intranet de alimentos"
+              />
+            </div>
+            <div className="project-card__content">
+              <h3>Intranet de alimentos · Django</h3>
+              <p className="project-card__meta">Django · HTML · CSS · JavaScript</p>
+              <p>
+                Intranet para gestión de alimentos con Django en el backend y plantillas con HTML,
+                CSS y JavaScript. Se ejecuta en local; las capturas rotan automáticamente.
+              </p>
+              <div className="project-card__links">
+                <a
+                  href="https://github.com/jhonziz2/Intranet-de-alimentos-en-Django"
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn--small"
